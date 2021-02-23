@@ -8,3 +8,4 @@
 /httpRequests/
 .idea/vcs.xml
 .idea/leetcode/editor.xml
+/target/
