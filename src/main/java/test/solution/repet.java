@@ -24,6 +24,7 @@ public class repet {
         }
         return set.size()!= nums.length;
     }
+    //反转字符串中的单词
     public static String reverseWords(String s) {
         StringBuffer ret = new StringBuffer();
         int length = s.length();
