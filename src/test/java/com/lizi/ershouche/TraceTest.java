@@ -10,17 +10,17 @@ import org.testng.annotations.Test;
  * @Date: 2020/10/19 6:03 下午
  */
 public class TraceTest extends TraceBase{
-   // @Test(description = "正常流程")
+    @Test(description = "正常流程")
     public void test001() throws Exception {
         String result = TraceServers.trace(url);
         System.out.println(result);
     }
-   // @Test(description = "联系人为空")
+    @Test(description = "联系人为空")
     public void test002() throws Exception {
         String result = TraceServers.trace(url,"agentName","");
         System.out.println(result);
     }
-    //@Test(description = "详情为空")
+    @Test(description = "详情为空")
     public void test003() throws Exception {
         String result = TraceServers.trace(url,"content","");
         System.out.println(result);

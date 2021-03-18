@@ -8,6 +8,7 @@ import com.aventstack.extentreports.model.TestAttribute;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.lizi.utils.DateTool;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -108,7 +109,7 @@ public class ExtentIReporterListenerUtil implements IReporter {
 
         extent.flush();
 
-        String REPORT_PATH="report/index.html";
+        /*String REPORT_PATH="report/index.html";
         Document html;
 
 		try {
@@ -123,7 +124,7 @@ public class ExtentIReporterListenerUtil implements IReporter {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
     }
 
     private void init() {
@@ -132,7 +133,9 @@ public class ExtentIReporterListenerUtil implements IReporter {
         if(!reportDir.exists()&& !reportDir .isDirectory()){
             reportDir.mkdir();
         }
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
+        String time = DateTool.dataToString(new Date());
+
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER +time +FILE_NAME);
         // 设置静态文件的DNS
         //怎么样解决cdn.rawgit.com访问不了的情况
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);

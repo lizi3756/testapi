@@ -58,13 +58,13 @@ public class JSONPathUtil {
 				"}";
 
 
-		//System.out.println(extract(jsonString,"$.errors.defaultMessage").toString());
-		String s = extract(jsonString, "$.errors").toString();
+		System.out.println(extract(jsonString,"$.errors[0].code").toString());
+		/*String s = extract(jsonString, "$.errors").toString();
 		JSONArray jsonArray=JSONArray.parseArray(s);
 		String s1 = jsonArray.get(0).toString();
 
 		JSONObject jsonObject=JSONObject.parseObject(s1);
 		String defaultMessage = jsonObject.getString("defaultMessage");
-		System.out.println(defaultMessage);
+		System.out.println(defaultMessage);*/
 	}
 }

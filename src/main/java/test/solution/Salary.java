@@ -5,20 +5,61 @@ package test.solution;
  * @date  2021/2/22 22:05
  */
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Salary {
 
 
     public static void main(String[] args) {
-        int[] arr ={5,2,8,4};
+        int[] arr ={2,2,1,1,1,2,1};
         /*int[] ints = pailie(arr);
         for(int i:ints){
             System.out.println(i);
         }*/
-       y(7);
+      Salary s = new Salary();
+        System.out.println(s.max3(arr));
 
+    }
+
+    //数组中的多数
+    public int max3(int[] arr){
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i =0 ;i< arr.length ;i++){
+            if(map.containsKey(arr[i])){
+                map.put(arr[i],map.get(arr[i])+1);
+            }else {
+                map.put(arr[i],1);
+                if(map.get(arr[i]) > arr.length/2){
+                    return arr[i];
+                }
+            }
+        }
+        /*for(Map.Entry<Integer,Integer> m : map.entrySet()){
+            if(m.getValue() > arr.length/2){
+                return   m.getKey();
+            }
+        }*/
+        return -1;
+    }
+    public int max2(int[] arr){
+        int count =1;
+        int num = arr[0];
+        for(int i =1;i < arr.length; i++){
+            if(arr[i] == num){
+                count++;
+            }else {
+                count--;
+                if(count == 0){
+                    num = arr[i];
+                    count = 1;
+                }
+            }
+        }
+        return num;
+    }
+    public int max1(int[] arr){
+        Arrays.sort(arr);
+        return arr[(arr.length-1) / 2];
     }
 
     //杨辉三角

@@ -17,6 +17,8 @@ public class PropertyUtil {
 		//Properties httpProps= com.lizi.utils.PropertyUtil.getProperties(property+"/src/main/resources/httpuri.properties");
 		//System.out.println(httpProps.getProperty("http.crm.url"));
 		System.out.println(getAllKeyValue(property+"/src/main/resources/httpuri.properties"));
+		Properties pro =  new Properties();
+		Iterator  it = pro.entrySet().iterator();
 	}
 
 	public static Properties getProperties(String fileName) {

@@ -16,16 +16,16 @@ public class ThreeJi {
         for(int i=0;i< num2.length;i++){
             set.add(num2[i]);
         }
-        for(Integer i : set){
+       /* for(Integer i : set){
             System.out.println(i);
-        }
+        }*/
         //System.out.println(set.size());
 
         //System.out.println(maxThree(arry));
-        /*int[] jiaoji = jiaoji(arry, num2);
+        int[] jiaoji = jiaoji(arry, num2);
         for(int i: jiaoji){
             System.out.println(i);
-        }*/
+        }
 
     }
 

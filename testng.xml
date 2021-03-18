@@ -6,14 +6,13 @@
 		<listener class-name="com.lizi.report.ExtentIReporterListenerUtil"></listener><!-- 这是extentreport报告的监听 -->
 		<listener class-name="org.uncommons.reportng.HTMLReporter" /><!-- 这是reportng报告的监听 -->
 	<!-- 	<listener class-name='com.testfan.ui.auto.utils.RetryListener'/> -->
-
 	</listeners>
 
 	<test name="CRM系统接口测试" preserve-order="true">
 		<classes>
-<!-- 				<class name="com.mtx.crm.LoginTests" /> -->
+<!-- 		<class name="com.mtx.crm.LoginTests" /> -->
 			<class name="com.lizi.ershouche.StoreTest1" />
-
+			<class name="com.lizi.ershouche.TraceTest" />
 
 		</classes>
 	</test>

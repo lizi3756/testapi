@@ -51,6 +51,7 @@ public class ProTest {
         return prop;
     }
 
+
     public static HashMap<String, String> getAllKeyValue(String file) throws IOException {
         HashMap<String, String> keyValus = new HashMap<String, String>();
 

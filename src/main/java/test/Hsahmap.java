@@ -25,8 +25,7 @@ public class Hsahmap {
             System.out.println(s);
         }
         //3
-        Set<Map.Entry<String, String>> entries =  map.entrySet();
-        for (Map.Entry<String, String> en: entries) {
+        for (Map.Entry<String, String> en: map.entrySet()) {
             System.out.println(en.getKey()+"="+ en.getValue());
 
         }

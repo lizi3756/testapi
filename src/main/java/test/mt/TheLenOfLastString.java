@@ -8,10 +8,12 @@ package test.mt;
 public class TheLenOfLastString {
 
     public static void main(String[] args) {
+
         System.out.println(lengthOfLastWord("  sdfjnfe  hdnec  bdejec     "));
     }
     public static int lengthOfLastWord(String s){
-        String[] s1 = s.trim().split(" ");
+        String[] s1 = s.trim().split("\\s+");
+        System.out.println("长度为："+s1.length);
         if(s1.length==0){
             System.out.println("请输入字符串");
             return 0;

@@ -20,11 +20,10 @@ public class DateTool {
         //Date date= new Date();
         //Date date=new Date(1272958479586l);//参数为long类型
         //long time = date.getTime();//返回long类型
-        SimpleDateFormat sFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         String format = sFormat.format(date);
         return format;//返回的格式为：2020-10-26 19:39:23
     }
-
     /*
     * 入参：String   2020-10-26 19:39:23
     * 返回：Date   Mon Oct 26 19:39:23 CST 2020
@@ -65,6 +64,7 @@ public class DateTool {
         int day1 = c.get(Calendar.DAY_OF_MONTH);
         System.out.println(year1+"/"+month1+"/"+day1);*/
         Date date = DateUtil.parseYYYYMMDDDate("2020/10/26");
-        System.out.println(dataToString(date));
+        //System.out.println(dataToString(date));
+        System.out.println(System.currentTimeMillis());
     }
 }

@@ -12,7 +12,7 @@ import java.util.Map;
 public class Target {
     public static void main(String[] args) {
         int[] arr ={1,3,5,2,4,8,7};
-        deng1(arr,6);
+        deng2(arr,15);
     }
     //返回元素下标
     public static int[] deng1(int[] arr ,int target){
@@ -26,10 +26,24 @@ public class Target {
             }
             map.put(arr[i],i);//key是数组元素，value是元素下标
         }
-        System.out.println(arrnew[0]+","+arrnew[1]);
         return arrnew;
     }
+    public static int[] deng2(int[] arr ,int target){
+        Map<Integer,Integer> map = new HashMap<>();
+        int[] arr1 = new int[2];
+        for(int  i = 0 ;i < arr.length ; i++){
+            if(map.containsKey(target - arr[i])){
+                arr1[0] = i;
+                arr1[1] = map.get(target - arr[i]);
+                break;
+            }else {
+                map.put(arr[i],i);
+            }
+        }
+        System.out.println(arr1[0]+","+arr1[1]);
 
+        return arr1;
+    }
 
 
     //找到数组中2个和等于target的2个数/索引,假设只有一组和满足

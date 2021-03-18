@@ -4,7 +4,9 @@ package test.mt;
 import org.apache.poi.ss.formula.functions.T;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: lizi
@@ -14,11 +16,33 @@ import java.util.List;
 public class DeleteSame {
     public static void main(String[] args) {
         String[] arr = {"aa","bb","aa","cc"};
-        List<String> strings = deleteSame(arr);
+        Integer[] arr1 = {1,1,2,3,3};
+        /*List<String> strings = deleteSame(arr);
         for(String s:strings ){
+            System.out.println(s);
+        }*/
+        dealets(arr1);
+    }
+    /*public static void dealets(int[] str){
+        Set<Integer> set = new HashSet<>();
+        for(int s :str){
+            set.add(s);
+        }
+        for(int s :set){
+            System.out.println(s);
+        }
+    }*/
+    public static <T>void dealets(T[] str){
+        Set<T> set = new HashSet<>();
+        for(T s :str){
+            set.add(s);
+        }
+        for(T s :set){
             System.out.println(s);
         }
     }
+
+
     //删除数组字符串中一样的元素，并把排重后的输出
     public  static <T> List<T> deleteSame(T[] str){
         List<T> newstr = new ArrayList<>();

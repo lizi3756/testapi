@@ -16,7 +16,7 @@ public class CrmTestBase {
     public static Connection conn;
     public static String token;
     @BeforeClass
-    public void init() throws Exception {
+    public static void init() throws Exception {
         Properties properties = PropertyUtil.getProperties("src/main/resources/httpuri.properties");
         url=properties.getProperty("http.crm.url");//从配置文件中读取url
         Properties dbproperties = PropertyUtil.getProperties("src/main/resources/db.properties");

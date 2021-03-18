@@ -14,7 +14,7 @@ public class LengthOfLongestSubstrin {
     public static void main(String[] args) {
         int length = lengthOfLongestSubstring3("abcad");//bcda，4
         //System.out.println(length);
-        int l = lengthOfString1("ab bbb djlklk  ");
+        int l = lengthOfString1("ab bbb  djlklk  ");
         System.out.println(l);
     }
     //没看懂
